@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Sale Shop" col="4">
+    <label name="name" />
+    <field name="name" />
+    <label name="currency"/>
+    <field name="currency"/>
+    <label name="type"/>
+    <field name="type"/>
+    <label name="allow_tier_pricing"/>
+    <field name="allow_tier_pricing"/>
+</form>

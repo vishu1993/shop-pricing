@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Shop Prices">
+    <field name="shop" />
+    <field name="quantity"/>
+    <field name="price"/>
+    <field name="currency"/>
+</tree>
