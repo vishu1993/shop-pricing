@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="shop_view_form">
+            <field name="model">sale.shop</field>
+            <field name="type">form</field>
+            <field name="name">shop_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="shop_view_tree">
+            <field name="model">sale.shop</field>
+            <field name="type">tree</field>
+            <field name="name">shop_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_shop_form">
+            <field name="name">Sale Shop</field>
+            <field name="res_model">sale.shop</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_shop_view1">
+            <field name="sequence" eval="2"/>
+            <field name="view" ref="shop_view_form"/>
+            <field name="act_window" ref="act_shop_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_shop_view2">
+            <field name="sequence" eval="1"/>
+            <field name="view" ref="shop_view_tree"/>
+            <field name="act_window" ref="act_shop_form"/>
+        </record>
+
+        <menuitem name="Shop Pricing" id="main_menu" sequence="0" icon="tryton-preferences"/>
+
+        <menuitem id="menu_shop" parent="main_menu" action="act_shop_form"
+          sequence="0" icon="tryton-preferences"/>
+
+        <record model="ir.ui.view" id="shop_price_view_form">
+            <field name="model">product.product.shop_price</field>
+            <field name="type">form</field>
+            <field name="name">shop_price_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="shop_price_view_tree">
+            <field name="model">product.product.shop_price</field>
+            <field name="type">tree</field>
+            <field name="name">shop_price_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_shop_price_form">
+            <field name="name">Shop Price</field>
+            <field name="res_model">product.product.shop_price</field>
+        </record>
+        <record model="ir.action.act_window.view" id="act_shop_price_view1">
+            <field name="sequence" eval="2"/>
+            <field name="view" ref="shop_price_view_form"/>
+            <field name="act_window" ref="act_shop_price_form"/>
+        </record>
+
+        <record model="ir.action.act_window.view" id="act_shop_price_view2">
+            <field name="sequence" eval="1"/>
+            <field name="view" ref="shop_price_view_tree"/>
+            <field name="act_window" ref="act_shop_price_form"/>
+        </record>
+
+        <menuitem id="menu_shop_price" parent="main_menu" action="act_shop_price_form"
+          sequence="0" icon="tryton-preferences"/>
+          
+    </data>
+</tryton>

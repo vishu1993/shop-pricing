@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree string="Sale Shops">
+    <field name="name" />
+    <field name="type"/>
+    <field name="currency"/>
+    <field name="allow_tier_pricing"/>
+</tree>
