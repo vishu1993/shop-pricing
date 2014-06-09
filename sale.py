@@ -54,6 +54,7 @@ class ShopPrice(ModelSQL, ModelView):
     )
 
     price = fields.Numeric("Price", required=True)
+    product = fields.Many2One("product.product", "Product", required=True)
 
     allow_tier_pricing = fields.Function(
         fields.Boolean("Allow Tier Pricing ?", on_change_with=['shop']),
