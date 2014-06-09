@@ -6,6 +6,8 @@
     <field name="currency"/>
     <label name="price"/>
     <field name="price"/>
+    <label name="product"/>
+    <field name="product"/>
     <label name="quantity"/>
     <field name="quantity"/>
 
